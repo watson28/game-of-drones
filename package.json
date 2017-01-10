@@ -15,7 +15,7 @@
   "author": "Jorge Florian",
   "license": "ISC",
   "dependencies": {
-    "@angular/router": "^3.4.2",
+    "@angular/router": "^0.2.0",
     "angular": "^1.6.1",
     "bootstrap": "^4.0.0-alpha.6",
     "express": "^4.14.0",

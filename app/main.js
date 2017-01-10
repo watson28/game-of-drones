@@ -21,10 +21,9 @@ angular
     'gameOfDrones.components.statisticsPage',
     'gameOfDrones.components.configurationPage'
 ])
-.config(function ($locationProvider, $ngReduxProvider) { // TODO fix injection
-    //$locationProvider.html5Mode(true);
+.config(['$ngReduxProvider', function ($ngReduxProvider) {
     $ngReduxProvider.createStoreWith(reducer, [], [], initialState);
-})
+}])
 .value('$routerRootComponent', 'app')
 .component('app', {
     template: '<ng-outlet></ng-outlet>',
