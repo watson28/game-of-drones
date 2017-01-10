@@ -1,0 +1,14 @@
+<table class="table round-list">
+    <thead>
+        <tr>
+            <th>Round</th>
+            <th>Winner</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="roundWinner in $ctrl.roundWinners track by $index">
+            <td>{{$index + 1}}</td>
+            <td>{{roundWinner || 'DRAW'}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+<div class="jumbotron player-move-selection">
+    <h1>Round # {{$ctrl.roundNumber}}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <p class="lead">{{$ctrl.player}} turns</p>
+        </div>
+        <div class="col-md-8">
+            <form class="" name="form" ng-submit="$ctrl.selectMove()">
+                <div class="input-group">
+                    <select class="form-control" ng-model="$ctrl.selectedMove">
+                        <option ng-repeat="move in $ctrl.moves" value="{{move}}">{{move}}</option>
+                    </select>
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Select!</button>
+                    </span>
+                </div>
+                </p>
+            </form>  
+        </div>
+    </div>            
+</div>

@@ -1,0 +1,15 @@
+{
+  "extends": "standard",
+  "plugins": [
+        "standard",
+        "promise"
+  ],
+  "rules": {
+    "semi": ["error", "always", { "omitLastInOneLineBlock": true }],
+    "quotes": ["warn", "single"],
+    "indent": ["warn", 4, { "SwitchCase": 1 }]
+  },
+  "env": {
+    "jasmine": true
+  }
+}

@@ -1,0 +1,21 @@
+<div class="game-page row">
+    <div class="col-md-8">
+        <player-move-selection
+            ng-if="!$ctrl.hasFinished"
+            round-number="$ctrl.roundNumber"
+            player="$ctrl.players[$ctrl.playerTurn]"
+            moves="$ctrl.moves",
+            on-select="$ctrl.addPlayerMove(move)">
+        </player-move-selection>
+
+        <game-winner
+            ng-if="$ctrl.hasFinished"
+            winner-name="$ctrl.runningGame.winner"
+            on-play-again="$ctrl.playAgain()"
+            on-choose-players="$ctrl.choosePlayers()">
+        </game-winner>
+    </div>
+    <div class="col-md-4">
+        <round-list round-winners="$ctrl.runningGame.roundWinners"></round-list>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="statistics-page">
+    <h2>Statistics</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Player</th>
+                <th>Won games</th>
+                <th>Lost games</th>
+                <th>Statistics</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="playerStatistic in $ctrl.playerStatistics">
+                <td>{{$index + 1}}</td>
+                <td>{{playerStatistic.player}}</td>
+                <td>{{playerStatistic.wonGames}}</td>
+                <td>{{playerStatistic.lostGames}}</td>
+                <td>
+                    <div class="progress">
+                        <div
+                            class="progress-bar bg-success"
+                            role="progressbar"
+                            style="width: {{playerStatistic.wonPercentage}}%;"
+                            aria-valuenow="{{playerStatistic.wonPercentage}}"
+                            aria-valuemin="0"
+                            aria-valuemax="100">
+                            won ({{playerStatistic.wonPercentage}}%)
+                        </div>
+                        <div
+                            class="progress-bar bg-danger"
+                            role="progressbar"
+                            style="width: {{playerStatistic.lostPercentage}}%;"
+                            aria-valuenow="{{playerStatistic.lostPercentage}}"
+                            aria-valuemin="0"
+                            aria-valuemax="100">lost ({{playerStatistic.lostPercentage}}%)</div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

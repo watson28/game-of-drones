@@ -1,0 +1,15 @@
+<form name="form" ng-submit="$ctrl.onSubmit()">
+    <div class="alert alert-{{$ctrl.alertType}}" role="alert" ng-show="$ctrl.visibleAlert">
+        {{$ctrl.alertMessage}}
+    </div>
+    <div class="form-group">
+        <label for="roundsToWonGame">Required rounds to won a game</label>
+        <input type="number" class="form-control" id="roundsToWonGame" name="roundsToWonGame" ng-model="$ctrl.roundsToWonGame">
+    </div>
+    <div class="form-group">
+        <label for="movesConfig">Game moves configuration</label>
+        <textarea class="form-control" id="movesConfig" name="movesConfig" rows="10" ng-model="$ctrl.movesJSONConfig">
+        </textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Save configuration</button>
+</form>

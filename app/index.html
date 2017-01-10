@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Game of Drones</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body ng-app="gameOfDrone" class="bg-faded">
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <nav id="topNav" class="navbar navbar-toggleable-sm">
+            <div class="container">
+                <button class="navbar-toggler hidden-md-up float-right" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                    ☰
+                </button>
+                <a class="navbar-brand" href="#">Game of Drones</a>
+                <div class="collapse navbar-collapse" id="collapsingNavbar">
+                    <ul class="navbar-nav">
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" ng-link="['Landing']">Game</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-link="['Statistics']">Statistics</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" ng-link="['Configuration']">Configuration</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container">
+            <app></app>
+        </section>
+
+        <!--
+        <p>Programming Assessment for <a href="http://uruit.com/company">UruIT</a>, by <a href="https://twitter.com/jafn28">Jorge Florian</a>.</p>
+        -->
+
+        <script src="main.js"></script>
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
