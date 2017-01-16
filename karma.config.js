@@ -2,16 +2,12 @@
 
 module.exports = function (config) {
     config.set({
-        basePath: '',
         frameworks: ['jasmine'],
         files: [
-            'node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
-            'app/mocks/mockedServices.js',
-            'app/main.spec.js',
-            'app/components/**/*.spec.js'
+            'app/main.spec.js'
         ],
         preprocessors: {
-            'app/**/*.js': ['webpack']
+            'app/main.spec.js': ['webpack', 'sourcemap']
         },
         webpack: {
             context: __dirname,
